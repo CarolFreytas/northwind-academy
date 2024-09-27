@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: stg_erp__funcionarios
+    description: Tabela de preparação dos dados brutos dos funcionários, contendo informações pessoais e profissionais de cada colaborador.
+    columns:
+      - name: PK_FUNCIONARIO
+        description: Chave primária que identifica de forma única cada funcionário no sistema.
+
+      - name: FK_GERENTE
+        description: Chave estrangeira que faz referência ao gerente do funcionário, vinculada ao PK_FUNCIONARIO do gerente.
+
+      - name: NOME_FUNCIONARIO
+        description: Nome completo do funcionário.
+
+      - name: CARGO_FUNCIONARIO
+        description: Cargo ou posição atual do funcionário dentro da empresa, como "Analista", "Gerente", etc.
+
+      - name: DT_NASCIMENTO_FUNCIONARIO
+        description: Data de nascimento do funcionário, no formato 'AAAA-MM-DD'.
+
+      - name: DT_CONTRATACAO
+        description: Data de contratação do funcionário pela empresa, no formato 'AAAA-MM-DD'.
+
+      - name: CIDADE_FUNCIONARIO
+        description: Cidade onde o funcionário reside.
+
+      - name: REGIAO_FUNCIONARIO
+        description: Região geográfica associada à localização do funcionário, como "Sudeste", "Nordeste", etc.
+
+      - name: PAIS_FUNCIONARIO
+        description: País onde o funcionário reside.
